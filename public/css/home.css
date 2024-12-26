@@ -1,0 +1,641 @@
+/* Importa a fonte "Poppins" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Define estilos gerais para todos os elementos */
+* {
+    font-family: 'poppins', sans-serif; /* Define a fonte padrão para 'Poppins' */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove preenchimento interno */
+    box-sizing: border-box; /* Garante que o preenchimento e a borda não afetem o tamanho total do elemento */
+    letter-spacing: 1px; /* Define o espaçamento entre letras */
+}
+
+/* Define estilos para o corpo do documento */
+body {
+    background-color: #e7dec4; /* Define a cor de fundo como um tom de bege */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da janela de visualização */
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    flex-direction: column; /* Organiza os elementos filho em coluna */
+}
+
+/* Define estilos para o cabeçalho */
+header {
+    background-color: #ff3900; /* Define a cor de fundo como laranja */
+    padding: 10px 0; /* Adiciona preenchimento superior e inferior de 10px */
+    position: fixed; /* Fixa o cabeçalho no topo da janela de visualização */
+    width: 100%; /* Define a largura como 100% da largura da janela de visualização */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    z-index: 1000; /* Define a ordem de empilhamento para garantir que o cabeçalho esteja sempre acima de outros elementos */
+}
+
+/* Define estilos para o contêiner da barra de navegação */
+.container-navbar {
+    justify-content: space-between;
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+/* Define estilos para o logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 5rem; /* Define a altura do logotipo como 5rem */
+    width: auto; /* Permite que a largura seja ajustada automaticamente para manter a proporção */
+    margin-right: 10px; /* Adiciona margem à direita de 10px */
+}
+.logo h2 {
+    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
+    font-weight: bold;   /* Define a fonte como negrito*/
+    color: #ffffff      /* Define a cor do texto como branco*/
+    
+}
+
+
+/* Define estilos para o menu de navegação */
+.nav-menu {
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin: 0; /* Remove as margens */
+    padding: 0; /* Remove o preenchimento */
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    justify-content: center; /* Alinha os itens à direita */
+}
+
+/* Define estilos para os itens do menu */
+.nav-item {
+    margin-left: 20px; /* Adiciona margem à esquerda de 20px */
+}
+
+/* Define estilos para os itens do menu ativos */
+.nav-item.active a {
+    color: #f1c6b2; /* Define a cor do texto transparente quando o item do menu está ativo */
+    font-weight: bold; /* Define a fonte como negrito */
+}
+
+/* Define estilos para os links dos itens do menu */
+.nav-item a {
+    text-decoration: none; /* Remove a decoração de link padrão */
+    color: #fff; /* Define a cor do texto como branco */
+    font-weight: bold; /* Define a fonte como negrito */
+}
+
+/* Define estilos para os links dos itens do menu ao passar o mouse */
+.nav-item a:hover {
+    color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
+}
+.login-item {
+    margin-right: auto; /* Move o botão "Entrar" para a extrema esquerda */
+}
+
+.login-btn {
+    /* Estilos do botão de login */
+    background-color: #0f0f0f;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.login-btn:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none; /* Esconde o menu de navegação em telas menores que 992px */
+        flex-direction: column; /* Organiza os itens do menu em coluna */
+        position: fixed; /* Fixa o menu na parte superior da janela de visualização */
+        top: 0; /* Posiciona o menu no topo */
+        left: 0; /* Posiciona o menu à esquerda */
+        width: 100%; /* Define a largura como 100% */
+        background-color: #ff3900; /* Define a cor de fundo como laranja */
+        padding: 10px; /* Adiciona preenchimento de 10px */
+        z-index: 1000; /* Define a ordem de empilhamento para garantir que o menu esteja sempre acima de outros elementos */
+    }
+
+    .nav-menu.show {
+        display: flex; /* Exibe o menu de navegação quando a classe .show é adicionada */
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Adiciona margem de 10px acima e abaixo dos itens do menu */
+    }
+}
+
+/* Estilos para o ícone do menu hamburguer */
+.hamburger {
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    padding: 10px; /* Adiciona preenchimento de 10px */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    font-size: 20px; /* Define o tamanho da fonte como 20px */
+    order: 2; /* Define a ordem de exibição */
+}
+
+/* Estilos para o ícone do menu hamburguer ao passar o mouse */
+.hamburger:hover {
+    color: #ff9100; /* Define a cor do texto como laranja ao passar o mouse */
+}
+
+/* Esconder botão hamburguer em dispositivos maiores que tablet */
+@media (min-width: 992px) {
+    .hamburger {
+        display: none; /* Esconde o ícone do menu hamburguer em telas maiores que 992px */
+    }
+}
+/* Estilos para o contêiner do carrossel */
+.carousel-container {
+    max-width: 100%; /* Utiliza a largura máxima disponível */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
+    padding-top: 6rem; /* ajusta o carrosel de modo que o posicionamento das imagens se iniciam logo abaixo do header*/
+}
+
+/* Estilo para o carrossel de largura total */
+.carousel {
+    position: relative; /* Define a posição relativa para o carrossel */
+    width: 100%; /* Define a largura do carrossel como 100% da largura do contêiner pai */
+    margin: 0; /* Define uma margem superior e inferior de 20px e margem lateral automática para centralizar */
+    padding: 0;  /* Remove o preenchimento interno */
+    overflow: hidden;
+}
+
+/* Contêiner dos slides do carrossel */
+.carousel .carousel-container {
+    display: flex;
+    overflow-x: auto; /* Permite rolar os slides horizontalmente em dispositivos menores */
+    scroll-snap-type: x mandatory; /* Define o comportamento de rolagem do carrossel */
+}
+
+/* Estilo dos slides individuais do carrossel */
+.carousel .carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Define a largura de cada slide como 100% da largura do contêiner de slides */
+    flex-shrink: 0; /* Impede que os slides diminuam de tamanho */
+}
+
+/* Estilo das imagens dentro dos slides */
+.carousel .carousel-slide img {
+    width: 100%; /* Define a largura da imagem como 100% do seu contêiner */
+    height: auto; /* Altura automática para manter a proporção da imagem */
+    display: block; /* Faz com que a imagem se comporte como um bloco */
+    border-radius: 10px; /* Adiciona bordas arredondadas às imagens */
+}
+
+/* Estilo para o texto dentro do carrossel */
+.carousel-text {
+    position: absolute; /* Define a posição absoluta para o texto dentro dos slides */
+    top: 50%; /* Alinha o texto verticalmente ao centro */
+    left: 50%; /* Alinha o texto horizontalmente ao centro */
+    width: 50%; /* Define a largura do texto como 50% do seu contêiner */
+    max-width: 800px; /* Define a largura máxima do texto */
+    transform: translate(-50%, -50%); /* Move o texto para o centro do slide */
+    background-color: rgba(0, 0, 0, 0.5); /* Define uma cor de fundo semitransparente para o texto */
+    padding: 10px; /* Adiciona preenchimento interno ao texto */
+    text-align: center; /* Alinha o texto centralmente */
+    color: #fff; /* Define a cor do texto como branca */
+    transition:opacity 0.5s ease; /* Adiciona uma transição suave para a opacidade do texto */
+    border-bottom-left-radius: 10px; /* Adiciona bordas arredondadas à parte inferior esquerda do texto */
+    border-bottom-right-radius: 10px; /* Adiciona bordas arredondadas à parte inferior direita do texto */
+}
+
+/* Estilo para o título dentro do texto do carrossel */
+.carousel-text h2 {
+    font-size: 36px; /* Define o tamanho da fonte do título */
+    margin-bottom: 5px; /* Adiciona uma margem inferior ao título */
+}
+
+/* Estilo para o parágrafo dentro do texto do carrossel */
+.carousel-text p {
+    font-size: 16px; /* Define o tamanho da fonte do parágrafo */
+    margin-bottom: 10px; /* Adiciona uma margem inferior ao parágrafo */
+}
+
+/* Estilo para o link dentro do texto do carrossel */
+.carousel-text a {
+    display: inline-block; /* Faz com que o link se comporte como um bloco */
+    padding: 8px 16px; /* Adiciona preenchimento ao link */
+    background-color: #ff3900; /* Define a cor de fundo do link */
+    color: white; /* Define a cor do texto do link como branca */
+    text-decoration: none; /* Remove a decoração de sublinhado do link */
+    border-radius: 3px; /* Adiciona bordas arredondadas ao link */
+}
+
+/* Estilo para o link ao passar o mouse */
+.carousel-text a:hover {
+    background-color: #ff9100; /* Define a cor de fundo do link ao passar o mouse */
+}
+
+/* Estilos específicos para telas menores */
+@media screen and (max-width: 768px) {
+    .carousel .carousel-container {
+        flex-direction: column; /* Altera a direção do flexbox para empilhar os slides verticalmente */
+        overflow-x: hidden; /* Esconde a rolagem horizontal */
+        scroll-snap-type: y mandatory; /* Define o comportamento de rolagem para a direção vertical */
+    }
+
+    .carousel .carousel-slide {
+        scroll-snap-align: start; /* Define como o carrossel deve "parar" durante a rolagem vertical */
+    }
+    .carousel-text {
+        position: relative; /* Altera para posição relativa para o texto ficar no fluxo do documento */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%; /* Define a largura do texto como 100% para ocupar todo o espaço disponível */
+        max-width: none; /* Remove a largura máxima para permitir que o texto ocupe toda a largura */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+/* Estilo dos cards de receitas */
+.receitas-visitada {
+    background-color: #f3dccd; /* Define a cor de fundo dos cards de receitas */
+}
+
+.receitas-visitada h2 {
+    text-align: center; /* Alinha o título do card de receitas ao centro */
+    font-size: 40px; /* Define o tamanho da fonte do título do card de receitas */
+    margin: 0 auto; /* Centraliza o card horizontalmente */
+    padding: 1rem; /* Adiciona preenchimento interno ao título do card de receitas */
+}
+
+/* Estilo do contêiner dos cards */
+.container-cards {
+    max-width: 1000px; /* Define a largura máxima do contêiner dos cards */
+    margin: 20px auto; /* Adiciona margem superior e inferior e centraliza horizontalmente */
+    padding: 0 20px; /* Adiciona preenchimento interno aos lados do contêiner */
+    display: flex; /* Usa flexbox para organizar os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para uma nova linha quando não houver espaço suficiente */
+    justify-content: space-between; /* Distribui os cards uniformemente ao longo do contêiner */
+}
+
+/* Estilo dos cards individuais */
+.card {
+    background-color: #fff; /* Define a cor de fundo dos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra aos cards */
+    border-radius: 8px; /* Adiciona bordas arredondadas aos cards */
+    padding: 20px; /* Adiciona preenchimento interno aos cards */
+    width: calc(33.33% - 40px); /* Define a largura de cada card */
+    margin-bottom: 20px; /* Adiciona margem inferior aos cards */
+}
+
+/* Estilo do título dentro dos cards */
+.card h2 {
+    font-size: 24px; /* Define o tamanho da fonte do título do card */
+    margin-bottom: 10px; /* Adiciona uma margem inferior ao título do card */
+}
+
+/* Estilo do texto dentro dos cards */
+.card p {
+    font-size: 16px; /* Define o tamanho da fonte do texto do card */
+    color: #666; /* Define a cor do texto do card */
+    margin-bottom: 20px; /* Adiciona uma margem inferior ao texto do card */
+}
+
+/* Estilo das imagens dentro dos cards */
+.card img {
+    display: block; /* Faz com que a imagem se comporte como um bloco */
+    margin: 0 auto; /* Centraliza horizontalmente a imagem dentro do card */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
+    height: auto; /* Altura automática para manter a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+    margin-bottom: 15px; /* Adiciona margem inferior à imagem */
+}
+
+/* Estilo do link "saiba mais" dentro dos cards */
+.card a {
+    display: block; /* Faz com que o link se comporte como um bloco */
+    background-color: #ff3900; /* Define a cor de fundo do link */
+    color: white; /* Define a cor do texto do link como branca */
+    text-decoration: none; /* Remove a decoração de sublinhado do link */
+    padding: 15px 32px; /* Adiciona preenchimento ao link */
+    border-radius: 4px; /* Adiciona bordas arredondadas ao link */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    font-size: 16px; /* Define o tamanho da fonte do link */
+    transition-duration: 0.4s; /* Define a duração da transição ao passar o mouse */
+    cursor: pointer; /* Altera o cursor ao passar o mouse sobre o link */
+}
+
+/* Estilo do link "saiba mais" ao passar o mouse */
+.card a:hover {
+    background-color: #ff9100; /* Define a cor de fundo do link ao passar o mouse */
+}
+
+/* Estilos específicos para telas menores */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px; /* Reduz o preenchimento lateral do contêiner para telas menores */
+    }
+    .card {
+        width: calc(50% - 30px); /* Define a largura dos cards para ocupar metade da largura do contêiner */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px; /* Reduz ainda mais o preenchimento lateral do contêiner para telas menores */
+    }
+    .card {
+        width: calc(100% - 20px); /* Define a largura dos cards para ocupar toda a largura do contêiner */
+    }
+}
+
+
+/* Estilo geral para utilidades */
+.util {
+    background-color: #f3dccd; /* Define a cor de fundo para elementos com a classe .util */
+}
+
+/* Estilos para o título dentro dos elementos com a classe .util */
+.util h2 {
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 40px; /* Define o tamanho da fonte */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 1rem; /* Adiciona preenchimento ao redor do título */
+}
+
+/* Estilos para a seção de conteúdo */
+section {
+    padding: 20px; /* Adiciona preenchimento interno */
+    background-color: #f2f2f2; /* Define a cor de fundo da seção */
+}
+
+/* Estilos para o contêiner de conteúdo */
+.conteudo {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    flex-wrap: wrap; /* Permite que os itens quebrem para uma nova linha quando necessário */
+}
+
+/* Estilos para o artigo */
+.conteudo article {
+    flex: 1; /* Faz com que o artigo expanda para ocupar o espaço disponível */
+    margin-right: 20px; /* Adiciona margem direita entre os artigos */
+    background-color: #fff; /* Define a cor de fundo do artigo */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao artigo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao artigo */
+    padding: 20px; /* Adiciona preenchimento interno ao artigo */
+    margin-bottom: 20px; /* Adiciona margem inferior ao artigo */
+}
+
+/* Estilos para o título do artigo */
+.conteudo article h2 {
+    color: #333; /* Define a cor do título */
+    font-size: 24px; /* Define o tamanho da fonte do título */
+    margin-bottom: 10px; /* Adiciona margem inferior ao título */
+}
+
+/* Estilos para o texto do artigo */
+.conteudo article p {
+    color: #333; /* Define a cor do texto */
+    font-size: 16px; /* Define o tamanho da fonte do texto */
+    margin-bottom: 10px; /* Adiciona margem inferior ao texto */
+}
+
+/* Estilos para a lista dentro do artigo */
+article ul {
+    margin-bottom: 10px; /* Adiciona margem inferior à lista */
+}
+
+article ul li {
+    color: #666; /* Define a cor do texto da lista */
+    font-size: 16px; /* Define o tamanho da fonte da lista */
+    margin-bottom: 5px; /* Adiciona margem inferior aos itens da lista */
+}
+
+/* Estilos para os links dentro do artigo */
+article a {
+    color: #ff3900; /* Define a cor dos links */
+    text-decoration: none; /* Remove a decoração de sublinhado dos links */
+    font-weight: bold; /* Define o peso da fonte dos links como negrito */
+    transition: color 0.3s; /* Adiciona uma transição suave de cor aos links */
+}
+
+/* Estilos para o vídeo dentro do contêiner de conteúdo */
+.conteudo .video-container {
+    flex: 1; /* Faz com que o vídeo expanda para ocupar o espaço disponível */
+    margin-bottom: 20px; /* Adiciona margem inferior ao vídeo */
+}
+
+/* Estilos para o vídeo */
+.video-container video {
+    width: 100%; /* Define a largura do vídeo como 100% do contêiner */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao vídeo */
+}
+
+/* Estilos para o botão */
+.button {
+    display: inline-block; /* Faz com que o botão se comporte como um bloco */
+    background-color: #ff3900; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão como branca */
+    padding: 10px 20px; /* Adiciona preenchimento interno ao botão */
+    text-decoration: none; /* Remove a decoração de sublinhado do botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    font-weight: bold; /* Define o peso da fonte do botão como negrito */
+    transition: background-color 0.3s; /* Adiciona uma transição suave de cor ao botão */
+}
+
+/* Estilos para o botão ao passar o mouse */
+.button:hover {
+    background-color: #ff9100; /* Define a cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos específicos para telas menores */
+@media screen and (max-width: 768px) {
+    .conteudo {
+        flex-direction: column; /* Altera a direção do flexbox para coluna em telas menores */
+    }
+    .conteudo article {
+        margin-right: 0; /* Remove a margem direita dos artigos em telas menores */
+    }
+}
+/* Estilo para o footer */
+footer {
+    width: 100%; /* Ocupa toda a largura */
+    color: #fff; /* Cor do texto */
+    justify-content: center; /* Centraliza o conteúdo */
+}
+
+/* Estilo para os links no footer */
+.footer-link {
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Estilo para o conteúdo do footer */
+#footer_content {
+    background-color:#ff3909; /* Cor de fundo */
+    display: grid; /* Usa um layout de grade */
+    grid-template-columns: repeat(4, 1fr); /* Divide em 4 colunas */
+    padding: 3rem 3.5rem; /* Espaçamento interno */
+}
+
+/* Estilo para o título de contatos */
+#footer_contacts h1 {
+    margin-bottom: 0.75rem; /* Espaçamento inferior */
+}
+
+/* Estilo para as redes sociais no footer */
+#footer_social_media {
+    display: flex; /* Usa um layout de flexbox */
+    gap: 2rem; /* Espaço entre os itens */
+    margin-top: 1.5rem; /* Espaçamento superior */
+}
+
+/* Estilo para os ícones das redes sociais */
+#footer_social_media .footer-link {
+    display: flex; /* Usa um layout de flexbox */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    height: 2.5rem; /* Altura */
+    width: 2.5rem; /* Largura */
+    color:#ffffff; /* Cor do ícone */
+    border-radius: 50%; /* Borda circular */
+    transition: all 0.4s; /* Transição suave */
+}
+
+/* Estilo para os ícones das redes sociais ao passar o mouse */
+#footer_social_media .footer-link:hover {
+    opacity: 0.8; /* Reduz a opacidade */
+}
+
+/* Estilos para as redes sociais específicas */
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    color: #fff; 
+}
+
+#facebook {
+    background-color: #4267b3;
+    color: #fff; 
+}
+
+#whatsapp {
+    background-color: #25d366;
+    color: #fff; 
+}
+
+/* Estilo para as listas no footer */
+.footer-list {
+    display: flex; /* Usa um layout de flexbox */
+    flex-direction: column; /* Direção da lista */
+    gap: 0.75rem; /* Espaço entre os itens */
+    list-style: none; /* Remove marcadores */
+}
+
+/* Estilo para os links nas listas do footer */
+.footer-list .footer-link {
+    color: #ffffff; /* Cor do texto */
+    transition: all 0.4s; /* Transição suave */
+}
+
+/* Estilo para os links nas listas do footer ao passar o mouse */
+.footer-list .footer-link:hover {
+    color: #ff9100; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo para o formulário de inscrição */
+#footer_subscribe {
+    display: flex; /* Usa um layout de flexbox */
+    flex-direction: column; /* Direção do conteúdo */
+    gap: 1.5rem; /* Espaço entre os elementos */
+}
+
+/* Estilo para o texto no formulário de inscrição */
+#footer_subscribe p {
+    color:#fff; /* Cor do texto */
+}
+
+/* Estilo para o grupo de entrada no formulário de inscrição */
+#input_group {
+    display: flex; /* Usa um layout de flexbox */
+    align-items: center; /* Alinha verticalmente */
+    background-color:#fff; /* Cor de fundo */
+    border-radius: 4px; /* Borda arredondada */
+}
+
+/* Estilo para o campo de entrada no formulário de inscrição */
+#input_group input {
+    all: unset; /* Remove estilos padrão */
+    padding: 0.75rem; /* Espaçamento interno */
+    width: 100%; /* Largura total */
+}
+
+/* Estilo para o botão no formulário de inscrição */
+#input_group button {
+    background-color: #0f0f0f; /* Cor de fundo */
+    border: none; /* Remove a borda */
+    color: #ffffff; /* Cor do texto */
+    padding: 0px 1.25rem; /* Espaçamento interno */
+    font-size: 1.125rem; /* Tamanho da fonte */
+    height: 100%; /* Altura total */
+    border-radius: 0px 4px 4px 0px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de mão */
+    transition: all 0.4s; /* Transição suave */
+}
+
+/* Estilo para o botão no formulário de inscrição ao passar o mouse */
+#input_group button:hover {
+    opacity: 0.8; /* Reduz a opacidade */
+}
+
+/* Estilo para o texto de direitos autorais */
+#footer_copyright {
+    display: flex; /* Usa um layout de flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    background-color:#0f0f0f; /* Cor de fundo */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    padding: 1.5rem; /* Espaçamento interno */
+    font-weight: 100; /* Peso da fonte */
+}
+
+/* Media queries para telas menores */
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 2rem; /* Espaço entre as colunas */
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna */
+        padding: 3rem 2rem; /* Espaçamento interno */
+    }
+}
+
+/* Estilo para o botão "Voltar ao topo" */
+#btnTopo {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixado na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    z-index: 99; /* Sobreposto a outros elementos */
+    background-color: #0f0f0f; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 50%; /* Borda circular */
+    width: 50px; /* Largura */
+    height: 50px; /* Altura */
+    padding: 0; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    line-height: 50px; /* Alinhamento vertical */
+    text-align: center; /* Alinhamento horizontal */
+    cursor: pointer; /* Cursor de mão */
+}
+
+/* Estilo para o ícone "Voltar ao topo" */
+#btnTopo::before {
+    content: '\25B2'; /* Seta para cima */
+}
+
+
+

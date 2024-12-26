@@ -1,0 +1,154 @@
+/* Definindo a fonte padrão */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(rgba(126, 126, 126, 0.8), rgba(21, 21, 21, 0.8)),
+  url('../images/fundo.avif');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container para centralizar o formulário */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  /* background-color: #fff; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centraliza textos horizontalmente */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  color:beige;
+}
+
+h2 {
+  text-align: center; /* Garante que o texto esteja centralizado */
+  /* color: #d1d1d1; */
+  color:beige;
+  margin-bottom: 20px; /* Dá um espaço entre o título e o formulário */
+}
+
+p {
+  text-align: center; /* Centraliza o texto */
+  margin-top: 10px; /* Ajusta a margem superior */
+  font-size: 14px; /* Define um tamanho de texto menor */
+  color: #ffffff; /* Deixa o texto mais discreto */
+}
+
+/* Estilo do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 95%;
+}
+
+input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Mensagens de erro */
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #007BFF;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px; /* Reduz o tamanho do botão */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: auto; /* Ajusta o tamanho baseado no conteúdo */
+  align-self: center; /* Centraliza o botão no formulário */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+label {
+  display: block; /* Faz com que a label ocupe toda a largura disponível */
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-bottom: 5px; /* Dá um pequeno espaçamento abaixo da label */
+  font-size: 14px; /* Ajusta o tamanho da fonte (opcional) */
+  color: #ffffff; /* Define uma cor para a label (opcional) */
+}
+
+
+/* Estilização da página index.html */
+.welcome-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.welcome-container p {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.buttons .btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.buttons .btn:hover {
+  background-color: #0056b3;
+}
