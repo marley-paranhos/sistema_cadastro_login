@@ -36,7 +36,6 @@ db.connect((err) => {
 
 // Rota principal
 app.get('/', (req, res) => {
-  // res.send('Bem-vindo ao Sistema de Cadastro e Login!');  // Responde com uma mensagem simples
   res.sendFile(path.join(__dirname, 'views', 'index.html'))
 });
 
@@ -120,6 +119,17 @@ app.post('/login', async (req, res) => {
     console.error('Erro ao comparar a senha:', error);  // Loga erros de comparação de senha
     res.status(500).send('Erro ao fazer login.');  // Retorna um erro genérico
   }
+});
+
+// Rota para download do currículo
+app.get('/download', (req, res) => {
+  const filePath = path.join(__dirname, 'public/files/cv_marley_paranhos.pdf');
+  res.download(filePath, 'Curriculo-Marley-Paranhos.pdf', (err) => {
+      if (err) {
+          console.error('Erro ao baixar o arquivo:', err);
+          res.status(500).send('Erro ao baixar o arquivo.');
+      }
+  });
 });
 
 // Inicia o servidor na porta 3000

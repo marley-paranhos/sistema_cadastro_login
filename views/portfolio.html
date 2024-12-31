@@ -1,138 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desenvolvedor Marley Paranhos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Usuário</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-<style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(rgba(126, 126, 126, 0.8), rgba(21, 21, 21, 0.8)),
-        url('../images/fundo.avif');
-      color: #333;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        margin: 10px;
-      }
-    }
-  
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-      font-size: 1.5rem;
-    }
-  
-    h1 {
-      margin: 1rem 0;
-      text-align: center;
-      font-size: 2.5rem;
-      color:beige;
-    }
-  
-    section {
-      margin: 2rem auto;
-      padding: 1rem;
-      max-width: 800px;
-      background: #fff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-  
-    section h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-  
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-  
-    ul li {
-      padding: 0.5rem 0;
-      font-size: 1.1rem;
-    }
-  
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 2rem;
-    }
-  
-    a {
-      color: #4facfe;
-      text-decoration: none;
-    }
-  
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-  
 <body>
-    <header class="header">
-        <h1>Bem-vindo ao Painel de Habilidades de Marley Paranhos</h1>
-        <p><i>Soluções inteligentes para transformar suas ideias em realidade.</i></p>
-    </header>
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">MPSolutions</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="https://wa.me/+5531980139754" target="_blank">Contato</a>
+      <a href="/logout">Sair</a>
+    </nav>
+  </header>
 
-    <main class="main-container">
-        <section class="about">
-            <h2>Sobre Mim</h2>
-            <p>Sou desenvolvedor back-end especializado em Python, Flask, MySQL e AWS, com experiência em criar soluções seguras e escaláveis para atender a diversas necessidades.</p>
-        </section>
+  <!-- Main Content -->
+  <main>
+    <div class="dashboard-container">
+      <h1>Bem-vindo, Usuário!</h1>
+      <p>Estamos felizes em tê-lo de volta. Aqui estão algumas opções para você explorar:</p>
+      
+      <!-- Opções principais -->
+      <div class="dashboard-links">
+        <a href="/profile" class="btn">Meu Perfil</a>
+        <a href="/projects" class="btn">Meus Projetos</a>
+        <a href="/settings" class="btn">Configurações</a>
+        <a href="/support" class="btn">Suporte</a>
+      </div>
+      
+      <!-- Mensagem motivacional -->
+      <blockquote>
+        <p><i>"O sucesso é o resultado da preparação, trabalho árduo e aprendizado com o fracasso."</i> - Colin Powell</p>
+      </blockquote>
+    </div>
+  </main>
 
-        <section class="skills">
-            <h2>Habilidades Técnicas</h2>
-            <ul>
-                <li><strong>Linguagens:</strong> Python, JavaScript</li>
-                <li><strong>Frameworks:</strong> Flask, Tkinter, SQLAlchemy</li>
-                <li><strong>Ferramentas:</strong> MySQL, AWS</li>
-            </ul>
-        </section>
-
-        <section class="projects">
-            <h2>Projetos</h2>
-            <ul>
-                <li><strong>Sistema de Cadastro e Login:</strong> Aplicação web com Flask, SQLAlchemy e MySQL.</li>
-                <li><strong>Controle de Estoque:</strong> Sistema desktop com Python, TKinter e SQLite.</li>
-                <li><strong>Portfolio:</strong> Website responsivo para apresentação de habilidades e projetos.</li>
-            </ul>
-        </section>
-
-        <section class="certifications">
-            <h2>Certificações</h2>
-            <ul>
-                <li>AWS Re/Start Cloud - Escola da Nuvem</li>
-                <li>Python Avançado - IGTI, Udemy, DIO</li>
-                <li>Introdução à Ciência da Computação - CC50</li>
-            </ul>
-        </section>
-
-        <section class="contact">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo:</p>
-            <ul>
-                <li><a href="mailto:mpsvideos.marley@gmail.com">Email</a></li>
-                <li><a href="https://github.com/seuperfil" target="_blank">GitHub</a></li>
-                <li><a href="http://www.linkedin.com/in/marley-paranhos" target="_blank">LinkedIn</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2024 Marley Paranhos. Todos os direitos reservados.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 MPSolutions. Todos os direitos reservados.</p>
+      <p>Siga-nos: 
+        <a href="https://www.linkedin.com/in/marley-paranhos" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

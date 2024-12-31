@@ -7,17 +7,41 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <div class="welcome-container">
-    <h1>Bem-vindo ao Sistema MPSolutions</h1>
-    <h2><i>Soluções inteligentes para transformar suas ideias em realidade.</i></h2>
-    <h2>Este projeto faz parte do meu portfólio, onde demonstro um pouco das minhas habilidades em desenvolvimento de software.</h2>
-    <p>Gerencie sua conta de forma simples e segura.</p>
-    <p><strong>Para acessar o sistema, por favor, realize o cadastro antes de efetuar o login.</strong></p>
-    <p id="developer"><i>Desenvolvido por Marley Paranhos.</i></p>
-    <div class="buttons">
-      <a href="/login" class="btn">Login</a>
-      <a href="/register" class="btn">Cadastre-se</a>
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">MPSolutions</a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="https://wa.me/+5531980139754" target="_blank">Contato</a>
+      <a href="/download">📄 Baixar Currículo</a>
+    </nav>
+  </header>  
+
+  <!-- Main Content -->
+  <main>
+    <div class="welcome-container">
+      <h1>Bem-vindo ao Sistema MPSolutions</h1>
+      <h2><i>Soluções inteligentes para transformar suas ideias em realidade.</i></h2>
+      <h2>Este projeto faz parte do meu portfólio, onde demonstro um pouco das minhas habilidades em desenvolvimento de software.</h2>
+      <p>Gerencie sua conta de forma simples e segura.</p>
+      <p><strong>Para acessar o sistema, por favor, realize o cadastro antes de efetuar o login.</strong></p>
+      <p id="developer"><i>Desenvolvido por Marley Paranhos.</i></p>      
+      
+      <!-- Botões -->
+      <button onclick="window.location.href='/login'" class="btn">Login</button>
+      <button onclick="window.location.href='/register'" class="btn">Cadastre-se</button>
     </div>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 MPSolutions. Todos os direitos reservados.</p>
+      <p>Siga-nos: 
+        <a href="https://www.linkedin.com/in/marley-paranhos" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/marley-paranhos" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

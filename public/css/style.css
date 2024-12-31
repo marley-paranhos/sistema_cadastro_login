@@ -1,15 +1,22 @@
-/* Definindo a fonte padrão */
+/* Corpo da página */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(rgba(126, 126, 126, 0.8), rgba(21, 21, 21, 0.8)),
+  background: linear-gradient(rgba(24, 42, 80, 0.8), rgba(129, 129, 129, 0.8)),
   url('../images/fundo.avif');
   background-size: cover;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container para centralizar o conteúdo principal */
+main {
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex: 1; /* Permite que o main ocupe o restante do espaço disponível */
 }
 
 /* Container para centralizar o formulário */
@@ -18,9 +25,59 @@ body {
   max-width: 400px;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Centraliza textos horizontalmente */
+  box-shadow: 0 4px 8px rgba(197, 197, 197, 0.1);
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+/* Header */
+header {
+  background-color: #343a40;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Links de navegação */
+.nav-links {
+  display: flex;
+  gap: 1rem; /* Espaçamento entre os links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.header-container {
+  display:flex;
+  justify-content: space-between;
 }
 
 /* Títulos */
@@ -30,8 +87,7 @@ h1 {
 }
 
 h2 {
-  text-align: center; /* Garante que o texto esteja centralizado */
-  /* color: #d1d1d1; */
+  text-align: center;
   color:beige;
   margin-bottom: 20px; /* Dá um espaço entre o título e o formulário */
 }
@@ -112,13 +168,12 @@ button:hover {
 }
 
 label {
-  display: block; /* Faz com que a label ocupe toda a largura disponível */
-  text-align: left; /* Alinha o texto à esquerda */
-  margin-bottom: 5px; /* Dá um pequeno espaçamento abaixo da label */
-  font-size: 14px; /* Ajusta o tamanho da fonte (opcional) */
-  color: #ffffff; /* Define uma cor para a label (opcional) */
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #ffffff;
 }
-
 
 /* Estilização da página index.html */
 .welcome-container {
@@ -153,10 +208,11 @@ label {
 
 .buttons .btn:hover {
   background-color: #0056b3;
-  transform: scale(1.1); /* Aumenta levemente o tamanho */
-  transition: 0.9s; /* Suaviza o efeito */
+  transform: scale(1.1);
+  transition: 0.9s;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .container {
       padding: 10px;
@@ -173,7 +229,7 @@ label {
   }
 
   h1, h2, p {
-      font-size: 1.2rem; /* Ajuste as fontes */
+      font-size: 1.2rem;
   }
 }
 
@@ -182,4 +238,3 @@ label {
   font-size: 0.9rem;
   color: #cccccc;
 }
-
