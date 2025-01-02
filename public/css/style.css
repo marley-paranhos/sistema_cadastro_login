@@ -1,4 +1,5 @@
 /* Corpo da página */
+/* Define o estilo geral da página com fonte, fundo gradiente com imagem, e configurações de layout flexível */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(rgba(24, 42, 80, 0.8), rgba(129, 129, 129, 0.8)),
@@ -12,6 +13,7 @@ body {
 }
 
 /* Container para centralizar o conteúdo principal */
+/* Centraliza o conteúdo no centro da página */
 main {
   display: flex;
   justify-content: center;
@@ -20,6 +22,7 @@ main {
 }
 
 /* Container para centralizar o formulário */
+/* Define um tamanho máximo, bordas arredondadas, sombra, e fundo semitransparente */
 .container {
   width: 100%;
   max-width: 400px;
@@ -27,30 +30,33 @@ main {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(197, 197, 197, 0.1);
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(40, 40, 42, 0.639);
 }
 
 /* Footer */
+/* Estiliza o rodapé com cor de fundo escura, texto claro e centralização do conteúdo */
 footer {
   background-color: #343a40;
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centraliza verticalmente os itens */
+  align-items: center;
 }
 
 /* Header */
+/* Estiliza o cabeçalho com cor de fundo escura, texto claro e elementos alinhados */
 header {
   background-color: #343a40;
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Centraliza verticalmente os itens */
+  align-items: center;
 }
 
 /* Logo */
+/* Define o estilo da logo com tamanho maior e fonte destacada */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -59,9 +65,10 @@ header {
 }
 
 /* Links de navegação */
+/* Cria um layout horizontal com espaçamento entre os links e efeitos de transição */
 .nav-links {
   display: flex;
-  gap: 1rem; /* Espaçamento entre os links */
+  gap: 1rem;
 }
 
 .nav-links a {
@@ -75,31 +82,42 @@ header {
   color: #007bff;
 }
 
+/* Centralização adicional para o container do cabeçalho */
 .header-container {
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
 /* Títulos */
+/* Centraliza os títulos e define cores claras */
 h1 {
   text-align: center;
-  color:beige;
+  color: rgb(255, 255, 255);
 }
 
 h2 {
   text-align: center;
-  color:beige;
-  margin-bottom: 20px; /* Dá um espaço entre o título e o formulário */
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
 }
 
+h4 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+/* Parágrafos */
+/* Centraliza o texto, define margens e ajusta o tamanho do texto */
 p {
-  text-align: center; /* Centraliza o texto */
-  margin-top: 10px; /* Ajusta a margem superior */
-  font-size: 14px; /* Define um tamanho de texto menor */
-  color: #ffffff; /* Deixa o texto mais discreto */
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
 }
 
 /* Estilo do formulário */
+/* Usa layout flexível vertical para inputs e define estilos padronizados */
 form {
   display: flex;
   flex-direction: column;
@@ -130,6 +148,7 @@ input[type="submit"]:hover {
 }
 
 /* Mensagens de erro */
+/* Destaca mensagens de erro com cor vermelha */
 .error {
   color: red;
   font-size: 14px;
@@ -137,6 +156,7 @@ input[type="submit"]:hover {
 }
 
 /* Links */
+/* Estilo padrão para links com efeitos de hover */
 a {
   text-decoration: none;
   color: #007BFF;
@@ -147,6 +167,8 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Botões */
+/* Define botões com estilo interativo, arredondado e centralizado */
 button {
   display: inline-block;
   text-decoration: none;
@@ -157,16 +179,18 @@ button {
   border-radius: 5px;
   font-size: 1em;
   transition: background-color 0.3s;
-  width: auto; /* Ajusta o tamanho baseado no conteúdo */
-  align-self: center; /* Centraliza o botão no formulário */
+  width: auto;
+  align-self: center;
 }
 
 button:hover {
   background-color: #0056b3;
-  transform: scale(1.1); /* Aumenta levemente o tamanho */
-  transition: 0.9s; /* Suaviza o efeito */
+  transform: scale(1.1);
+  transition: 0.9s;
 }
 
+/* Labels */
+/* Estilo para labels com alinhamento à esquerda e tamanho de fonte ajustado */
 label {
   display: block;
   text-align: left;
@@ -176,43 +200,25 @@ label {
 }
 
 /* Estilização da página index.html */
+/* Define uma seção de boas-vindas com fundo semitransparente e sombra */
 .welcome-container {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(40, 40, 42, 0.639);
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.welcome-container h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.welcome-container p {
-  margin-bottom: 20px;
-  font-size: 1.2em;
-}
-
-.buttons .btn {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  font-size: 1em;
-  transition: background-color 0.3s;
-}
-
-.buttons .btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
-  transition: 0.9s;
+.dashboard-container {
+  text-align: center;
+  background-color: rgba(40, 40, 42, 0.639);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Media Queries */
+/* Ajustes para dispositivos com largura menor que 768px */
 @media (max-width: 768px) {
   .container {
       padding: 10px;
@@ -233,6 +239,7 @@ label {
   }
 }
 
+/* Identificação do desenvolvedor */
 #developer {
   font-style: italic;
   font-size: 0.9rem;

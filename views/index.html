@@ -1,45 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!-- Define o tipo de documento como HTML5 e especifica o idioma principal da página como Português do Brasil. -->
+
 <head>
   <meta charset="UTF-8">
+  <!-- Define a codificação de caracteres como UTF-8, permitindo o uso de caracteres especiais. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a página para ser responsiva, ajustando o layout com base na largura da tela do dispositivo. -->
+
   <title>Bem-vindo</title>
+  <!-- Define o título da página, que será exibido na aba do navegador. -->
+
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Vincula o arquivo CSS externo para estilizar a página. -->
 </head>
+
 <body>
+  <!-- Corpo da página, onde o conteúdo visível será colocado. -->
+
   <!-- Header -->
   <header>
+    <!-- Define o cabeçalho da página. -->
+    
     <a href="#" class="logo">MPSolutions</a>
+    <!-- Um link para a logo do site. Aqui o `#` é um link placeholder. -->
+
     <nav class="nav-links">
+      <!-- Define os links de navegação no cabeçalho. -->
+      
       <a href="/">Home</a>
+      <!-- Link para a página inicial. -->
+
       <a href="https://wa.me/+5531980139754" target="_blank">Contato</a>
-      <a href="/download">📄 Baixar Currículo</a>
+      <!-- Link para contato via WhatsApp. O atributo `target="_blank"` abre o link em uma nova aba. -->
+
+      <a href="/sobre" target="_blank">Sobre</a>
+      <!-- Link para a página "Sobre", também abrindo em uma nova aba. -->
     </nav>
   </header>  
 
   <!-- Main Content -->
   <main>
+    <!-- Define o conteúdo principal da página. -->
+    
     <div class="welcome-container">
+      <!-- Um contêiner para centralizar e estilizar a mensagem de boas-vindas. -->
+
       <h1>Bem-vindo ao Sistema MPSolutions</h1>
+      <!-- Cabeçalho principal com o nome do sistema. -->
+
       <h2><i>Soluções inteligentes para transformar suas ideias em realidade.</i></h2>
-      <h2>Este projeto faz parte do meu portfólio, onde demonstro um pouco das minhas habilidades em desenvolvimento de software.</h2>
+      <!-- Um subtítulo estilizado com itálico. -->
+
+      <h4>Este projeto faz parte do meu portfólio, onde demonstro
+        <br>um pouco das minhas habilidades em desenvolvimento de software.</h4>
+      <!-- Descrição do projeto com uma quebra de linha (`<br>`) para melhor formatação. -->
+
       <p>Gerencie sua conta de forma simples e segura.</p>
+      <!-- Texto explicativo adicional. -->
+
       <p><strong>Para acessar o sistema, por favor, realize o cadastro antes de efetuar o login.</strong></p>
-      <p id="developer"><i>Desenvolvido por Marley Paranhos.</i></p>      
-      
+      <!-- Texto destacado em negrito com uma instrução para os usuários. -->
+
+      <p id="developer"><i>Desenvolvido por Marley Paranhos.</i></p>
+      <!-- Informação do desenvolvedor estilizada em itálico. -->
+
       <!-- Botões -->
       <button onclick="window.location.href='/login'" class="btn">Login</button>
+      <!-- Botão para redirecionar o usuário à página de login. -->
+
       <button onclick="window.location.href='/register'" class="btn">Cadastre-se</button>
+      <!-- Botão para redirecionar o usuário à página de cadastro. -->
     </div>
   </main>
 
   <!-- Footer -->
   <footer>
+    <!-- Define o rodapé da página. -->
+    
     <div class="footer-container">
+      <!-- Um contêiner para organizar o conteúdo do rodapé. -->
+
       <p>&copy; 2024 MPSolutions. Todos os direitos reservados.</p>
+      <!-- Mensagem de direitos autorais. -->
+
       <p>Siga-nos: 
         <a href="https://www.linkedin.com/in/marley-paranhos" target="_blank">LinkedIn</a> | 
+        <!-- Link para o perfil do LinkedIn, abrindo em uma nova aba. -->
+
         <a href="https://github.com/marley-paranhos" target="_blank">GitHub</a>
+        <!-- Link para o perfil do GitHub, abrindo em uma nova aba. -->
       </p>
     </div>
   </footer>

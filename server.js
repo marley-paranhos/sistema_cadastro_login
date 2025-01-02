@@ -36,17 +36,17 @@ db.connect((err) => {
 
 // Rota principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'))
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Rota de cadastro - retorna o formulário de cadastro
 app.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'register.html'));  // Retorna o arquivo HTML de cadastro
+  res.sendFile(path.join(__dirname, 'views', 'register.html'));
 });
 
 // Rota de login - retorna o formulário de login
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'login.html'));  // Retorna o arquivo HTML de login
+  res.sendFile(path.join(__dirname, 'views', 'login.html'));
 });
 
 // Rota para registrar um usuário
@@ -55,7 +55,7 @@ app.post('/register', async (req, res) => {
 
   // Verifica se todos os campos foram preenchidos
   if (!username || !password || !email) {
-    return res.status(400).send('Todos os campos são obrigatórios.');  // Retorna um erro se faltar algum campo
+    return res.send(`<script>alert('Todos os campos são obrigatórios.'); window.location.href='/register';</script>`);
   }
 
   try {
@@ -69,14 +69,13 @@ app.post('/register', async (req, res) => {
     db.query(query, [username, hashedPassword, email, telefone], (err, results) => {
       if (err) {
         console.error('Erro ao cadastrar usuário: ' + err.stack);  // Loga o erro, se ocorrer
-        return res.status(500).send('Erro ao cadastrar usuário.');  // Retorna um erro genérico
+        return res.send(`<script>alert('Erro ao cadastrar usuário.'); window.location.href='/register';</script>`);
       }
-      // res.send('Usuário cadastrado com sucesso!');  // Retorna uma mensagem de sucesso
-      res.sendFile(path.join(__dirname, 'views', 'login.html'))
+      res.send(`<script>alert('Usuário cadastrado com sucesso!'); window.location.href='/login';</script>`);
     });
   } catch (error) {
     console.error('Erro ao criptografar a senha:', error);  // Loga erros de criptografia
-    res.status(500).send('Erro ao criptografar a senha.');  // Retorna um erro genérico
+    res.send(`<script>alert('Erro ao criptografar a senha.'); window.location.href='/register';</script>`);
   }
 });
 
@@ -86,7 +85,7 @@ app.post('/login', async (req, res) => {
 
   // Verifica se todos os campos foram preenchidos
   if (!username || !password) {
-    return res.status(400).send('Todos os campos são obrigatórios.');  // Retorna um erro se faltar algum campo
+    return res.send(`<script>alert('Todos os campos são obrigatórios.'); window.location.href='/login';</script>`);
   }
 
   try {
@@ -95,12 +94,12 @@ app.post('/login', async (req, res) => {
     db.query(query, [username], async (err, results) => {
       if (err) {
         console.error('Erro ao fazer login: ' + err.stack);  // Loga erros na consulta ao banco
-        return res.status(500).send('Erro ao fazer login.');  // Retorna um erro genérico
+        return res.send(`<script>alert('Erro ao fazer login.'); window.location.href='/login';</script>`);
       }
 
       // Se o usuário não for encontrado
       if (results.length === 0) {
-        return res.status(404).send('Usuário não encontrado.');  // Retorna um erro se o usuário não existe
+        return res.send(`<script>alert('Usuário não encontrado.'); window.location.href='/login';</script>`);
       }
 
       // Compara a senha fornecida com a senha armazenada no banco
@@ -108,17 +107,21 @@ app.post('/login', async (req, res) => {
 
       // Se a senha não corresponder
       if (!isMatch) {
-        return res.status(401).send('Credenciais inválidas.');  // Retorna erro de autenticação
+        return res.send(`<script>alert('Credenciais inválidas.'); window.location.href='/login';</script>`);
       }
 
       // Se o login for bem-sucedido
-      // res.send('Login bem-sucedido!');  // Retorna mensagem de sucesso
-      res.sendFile(path.join(__dirname, 'views', 'portfolio.html'))
+      res.send(`<script>alert('Login bem-sucedido!'); window.location.href='/portfolio';</script>`);
     });
   } catch (error) {
     console.error('Erro ao comparar a senha:', error);  // Loga erros de comparação de senha
-    res.status(500).send('Erro ao fazer login.');  // Retorna um erro genérico
+    res.send(`<script>alert('Erro ao fazer login.'); window.location.href='/login';</script>`);
   }
+});
+
+// Rota para o portfólio
+app.get('/portfolio', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'portfolio.html')); // Envia o arquivo HTML do portfólio
 });
 
 // Rota para download do currículo

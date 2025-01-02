@@ -1,50 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!-- Define o tipo de documento como HTML5 e o idioma principal da página como Português do Brasil. -->
+
 <head>
   <meta charset="UTF-8">
+  <!-- Define a codificação de caracteres como UTF-8, permitindo o uso de caracteres especiais. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura a página para ser responsiva, ajustando o layout conforme a largura do dispositivo. -->
+
   <title>Área do Usuário</title>
+  <!-- Define o título da página, que será exibido na aba do navegador. -->
+
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Vincula o arquivo CSS externo para estilizar a página. -->
 </head>
+
 <body>
+  <!-- Corpo da página, onde o conteúdo visível será inserido. -->
+
   <!-- Header -->
   <header>
+    <!-- Define o cabeçalho da página. -->
+
     <a href="#" class="logo">MPSolutions</a>
+    <!-- Um link para a logo do site. O `#` é um link placeholder. -->
+
     <nav class="nav-links">
+      <!-- Define os links de navegação no cabeçalho. -->
+
       <a href="/">Home</a>
+      <!-- Link para a página inicial. -->
+
       <a href="https://wa.me/+5531980139754" target="_blank">Contato</a>
-      <a href="/logout">Sair</a>
+      <!-- Link para contato via WhatsApp. O atributo `target="_blank"` abre o link em uma nova aba. -->
+
+      <a href="/sobre" target="_blank">Sobre</a>
+      <!-- Link para a página "Sobre", também abrindo em uma nova aba. -->
+
+      <a href="/" class="btn btn-danger">Sair</a>
+      <!-- Link para a página de logout. -->
     </nav>
   </header>
 
   <!-- Main Content -->
   <main>
+    <!-- Define o conteúdo principal da página. -->
+
     <div class="dashboard-container">
+      <!-- Um contêiner para centralizar e organizar o conteúdo do dashboard. -->
+
       <h1>Bem-vindo, Usuário!</h1>
+      <!-- Mensagem de boas-vindas personalizada para o usuário. -->
+
       <p>Estamos felizes em tê-lo de volta. Aqui estão algumas opções para você explorar:</p>
-      
+      <!-- Texto introdutório com uma mensagem amigável. -->
+
       <!-- Opções principais -->
       <div class="dashboard-links">
+        <!-- Contêiner para os links principais do dashboard. -->
+
         <a href="/profile" class="btn">Meu Perfil</a>
+        <!-- Link para a página do perfil do usuário. -->
+
         <a href="/projects" class="btn">Meus Projetos</a>
+        <!-- Link para a página dos projetos do usuário. -->
+
         <a href="/settings" class="btn">Configurações</a>
+        <!-- Link para a página de configurações do usuário. -->
+
         <a href="/support" class="btn">Suporte</a>
+        <!-- Link para a página de suporte. -->
       </div>
-      
+
       <!-- Mensagem motivacional -->
       <blockquote>
+        <!-- Define um bloco de citação com uma mensagem inspiradora. -->
+        
         <p><i>"O sucesso é o resultado da preparação, trabalho árduo e aprendizado com o fracasso."</i> - Colin Powell</p>
+        <!-- Mensagem motivacional estilizada em itálico, com a autoria mencionada. -->
       </blockquote>
     </div>
   </main>
 
   <!-- Footer -->
   <footer>
+    <!-- Define o rodapé da página. -->
+    
     <div class="footer-container">
+      <!-- Um contêiner para organizar o conteúdo do rodapé. -->
+
       <p>&copy; 2024 MPSolutions. Todos os direitos reservados.</p>
+      <!-- Mensagem de direitos autorais. -->
+
       <p>Siga-nos: 
         <a href="https://www.linkedin.com/in/marley-paranhos" target="_blank">LinkedIn</a> | 
-        <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
+        <!-- Link para o perfil do LinkedIn, abrindo em uma nova aba. -->
+
+        <a href="https://github.com/marley-paranhos" target="_blank">GitHub</a>
+        <!-- Link para o perfil do GitHub, abrindo em uma nova aba. -->
       </p>
     </div>
   </footer>
