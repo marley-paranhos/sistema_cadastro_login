@@ -135,6 +135,23 @@ app.get('/download', (req, res) => {
   });
 });
 
+// Rota para logout de usuário
+app.get('/logout', (req, res) => {
+  if (req.session) {
+    req.session.destroy(err => {
+      if (err) {
+        console.error('Erro ao encerrar a sessão:', err);
+        return res.status(500).send('Erro ao encerrar a sessão.');
+      }
+      res.redirect('/login');
+    });
+  } else {
+    // Fazendo logout no sistema
+    res.send(`<script>alert('Até logo, Aguardo você em breve!'); window.location.href='/';</script>`);
+    // res.redirect('/login');
+  }
+});
+
 // Inicia o servidor na porta 3000
 app.listen(3000, () => {
   console.log('Servidor rodando na porta 3000');  // Loga a mensagem indicando que o servidor está ativo
