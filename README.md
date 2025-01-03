@@ -37,3 +37,22 @@ Antes de começar, você precisa ter instalado em sua máquina:
 ```bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
+
+---
+
+📜 Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+---
+
+✨ Autor
+Marley Paranhos
+💻 Desenvolvedor Back-End | Estudante de AWS Cloud Computing
+📧 mpsvideos.marley@gmail.com
+🌐 https://github.com/marley-paranhos | https://www.linkedin.com/in/marley-paranhos/
+
+---
+
+📬 Contato
+Email: mpsvideos.marley@gmail.com
+LinkedIn: https://www.linkedin.com/in/marley-paranhos/
