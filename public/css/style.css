@@ -16,9 +16,12 @@ body {
 /* Centraliza o conteúdo no centro da página */
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Alinha as sections em colunas */
+  justify-content: space-around; /* Distribui as sections em colunas */
   align-items: center;
-  flex: 1; /* Permite que o main ocupe o restante do espaço disponível */
+  flex: 1;
+  gap: 20px; /* Adiciona um espaço entre as colunas */
+  padding: 20px;
 }
 
 /* Container para centralizar o formulário */
@@ -64,6 +67,20 @@ header {
   text-decoration: none;
 }
 
+.btn-sair {
+  padding: 5px 10px;
+  background: rgba(253, 95, 95, 0.857);
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-decoration: none !important; /* Garante a remoção do sublinhado */
+  display: inline-block;
+}
+
+a.btn-sair {
+  text-decoration: none; /* Remove sublinhado de links específicos com a classe */
+}
+
 /* Links de navegação */
 /* Cria um layout horizontal com espaçamento entre os links e efeitos de transição */
 .nav-links {
@@ -96,6 +113,12 @@ h1 {
 }
 
 h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+h3 {
   text-align: center;
   color: rgb(255, 255, 255);
   margin-bottom: 20px;
@@ -244,4 +267,53 @@ label {
   font-style: italic;
   font-size: 0.9rem;
   color: #cccccc;
+}
+
+/* Estlização das imagens da página portfolio */
+.download-curriculo .curriculo {
+  display: flex;
+  justify-content: center;
+}
+
+/* Sections */
+section {
+  display: flex;
+  flex-direction: column; /* Exibe o conteúdo das sections em colunas */
+  width: 50%; /* Ajuste de largura das sections */
+  min-width: 300px;
+  background-color: rgba(40, 40, 42, 0.639);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção Meus Projetos */
+.projetos-container {
+  display: flex;
+  flex-direction: column; /* Organiza os projetos em colunas */
+  gap: 35px; /* Espaçamento entre as linhas de projetos */
+}
+
+.projeto {
+  display: flex; /* Exibe os itens de cada projeto em linha */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre os itens do projeto */
+}
+
+/* Ajustes responsivos para dispositivos menores */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* Empilha as sections em dispositivos menores */
+    gap: 10px;
+  }
+  
+  .projetos-container {
+    gap: 10px; /* Reduz o espaço entre as linhas em telas menores */
+  }
+
+  .projeto {
+    flex-wrap: wrap; /* Permite que os itens dentro de um projeto se ajustem em telas menores */
+  }
 }
