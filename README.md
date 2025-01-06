@@ -59,39 +59,16 @@ O objetivo principal deste sistema é demonstrar a criação de um fluxo de aute
 npm install
 
 3. Configure as Variáveis de Ambiente: Crie um arquivo .env na raiz do projeto com as seguintes configurações:
-DB_HOST=localhost
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
-DB_NAME=seu_banco_de_dados
-DB_PORT=3306
+   DB_HOST=localhost
+   DB_USER=seu_usuario
+   DB_PASSWORD=sua_senha
+   DB_NAME=seu_banco_de_dados
+   DB_PORT=3306
 
 4. Inicie o Servidor:
 npm start
 
 5. Acesse o Sistema: Abra o navegador e vá para http://localhost:3000.
-
-🧩 Estrutura do Projeto
-projeto_proz_formulario_cadastro/
-│
-├── public/
-│   ├── css/
-│   │   ├── home.css
-│   │   └── style.css
-│   ├── images/
-│   │   ├── [imagens do projeto]
-│   │   └── fundo.jpg
-│   └── files/
-│       └── cv_marley_paranhos.pdf
-│
-├── views/
-│   ├── index.html
-│   └── login.html
-│
-├── node_modules/
-├── app.js
-├── package.json
-├── package-lock.json
-└── .env.example
 
 💡 Habilidades Demonstradas
 Autenticação e Segurança:
