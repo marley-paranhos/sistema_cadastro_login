@@ -88,5 +88,5 @@ Este projeto é de uso pessoal e não possui uma licença específica. Caso tenh
 **Marley Paranhos**
 
 Entre em contato:
-- [LinkedIn](https://www.linkedin.com/in/seu-usuario)
-- [E-mail](mailto:seu-email@exemplo.com)
+- [LinkedIn](https://www.linkedin.com/in/marley-paranhos)
+- [E-mail](mailto:mpsvideos.marley@gmail.com)
