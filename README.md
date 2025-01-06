@@ -1,52 +1,92 @@
-# Formulário de Cadastro e Login
+# Sistema de Cadastro e Login
 
-Este é um projeto de formulário de cadastro e login desenvolvido com Node.js, Express, MySQL e outras tecnologias web. O objetivo é fornecer um sistema funcional e seguro para autenticação de usuários.
+Este projeto é um sistema de cadastro e login desenvolvido utilizando **Node.js** e **MySQL**. Ele inclui funcionalidades como autenticação de usuários, gerenciamento de sessões e uma interface simples para interagir com as funcionalidades principais do sistema.
 
----
+## Tecnologias Utilizadas
 
-## 🔧 Funcionalidades
+### Back-end
+- **Node.js**: Framework para construir aplicações JavaScript no lado do servidor.
+- **Express.js**: Framework para simplificar a criação de rotas e middleware.
+- **MySQL**: Banco de dados relacional para armazenar as informações de usuários.
+- **bcrypt.js**: Biblioteca para criptografia de senhas.
+- **dotenv**: Para gerenciamento de variáveis de ambiente.
+- **express-session**: Para gerenciamento de sessões de usuários.
 
-- Cadastro de novos usuários
-- Login de usuários existentes
-- Validação de dados de entrada
-- Conexão segura com o banco de dados MySQL
-- Integração com sessões para gerenciar autenticações
-- Mensagens de erro e sucesso para o usuário
+### Front-end
+- **HTML5**: Para a estruturação das páginas web.
+- **CSS3**: Para estilização e design das páginas.
+- **JavaScript**: Para adicionar interatividade e validações no lado do cliente.
 
----
+## Funcionalidades do Sistema
 
-## 🛠️ Tecnologias Utilizadas
+1. **Cadastro de Usuários**:
+   - Permite criar novos usuários com os seguintes dados: nome de usuário, e-mail, telefone e senha.
+   - As senhas são armazenadas de forma segura com criptografia usando bcrypt.
 
-- **Node.js**: Plataforma para execução do JavaScript no servidor
-- **Express**: Framework para construção do back-end
-- **MySQL**: Banco de dados relacional para armazenamento de usuários
-- **Express-Session**: Gerenciamento de sessões para autenticação
-- **HTML, CSS, JavaScript**: Desenvolvimento do front-end
+2. **Login de Usuários**:
+   - Permite que usuários registrados façam login utilizando nome de usuário e senha.
+   - Verifica a autenticidade das credenciais com validações seguras no servidor.
 
----
+3. **Gerenciamento de Sessões**:
+   - Usuários autenticados têm sessões gerenciadas para acesso contínuo ao sistema.
+   - Logout para encerrar sessões ativas.
 
-## 🚀 Como executar o projeto
+4. **Portfólio**:
+   - Após o login, o usuário é redirecionado para uma página de portfólio.
 
-### 1. Pré-requisitos
-Antes de começar, você precisa ter instalado em sua máquina:
-- [Node.js](https://nodejs.org/)
-- [MySQL](https://www.mysql.com/)
-- Um editor de código, como [VSCode](https://code.visualstudio.com/)
+5. **Download de Currículo**:
+   - Disponibiliza o currículo do desenvolvedor para download.
 
-### 2. Clone o repositório
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+6. **Página Sobre**:
+   - Fornece informações gerais sobre o sistema.
 
----
+## Como Executar o Projeto
 
-📜 Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
 
----
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-✨ Autor
-Marley Paranhos
-💻 Desenvolvedor Back-End | Estudante de AWS Cloud Computing
-📧 mpsvideos.marley@gmail.com
-🌐 https://github.com/marley-paranhos | https://www.linkedin.com/in/marley-paranhos/
+3. **Configure o arquivo `.env`** com as seguintes variáveis:
+   ```env
+   DB_HOST=localhost
+   DB_USER=seu_usuario
+   DB_PASSWORD=sua_senha
+   DB_NAME=seu_banco_de_dados
+   DB_PORT=3306
+   ```
+
+4. **Inicie o servidor**:
+   ```bash
+   npm start
+   ```
+
+5. **Acesse o sistema**:
+   Abra o navegador e vá para [http://localhost:3000](http://localhost:3000).
+
+## Habilidades Demonstradas
+
+- Criação de rotas no Express.js.
+- Uso de middleware para manipulação de dados do formulário.
+- Conexão com banco de dados MySQL e execução de queries.
+- Implementação de autenticação segura com bcrypt.
+- Gerenciamento de sessões com express-session.
+- Configuração e uso de variáveis de ambiente com dotenv.
+- Design e estilização de páginas front-end com HTML e CSS.
+
+## Licença
+
+Este projeto é de uso pessoal e não possui uma licença específica. Caso tenha interesse em utilizá-lo, entre em contato com o desenvolvedor.
+
+## Desenvolvedor
+
+**Marley Paranhos**
+
+Entre em contato:
+- [LinkedIn](https://www.linkedin.com/in/seu-usuario)
+- [E-mail](mailto:seu-email@exemplo.com)

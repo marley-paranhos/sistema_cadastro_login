@@ -4,6 +4,7 @@ const mysql = require('mysql2');  // Biblioteca para conectar e manipular bancos
 const dotenv = require('dotenv');  // Biblioteca para carregar variáveis de ambiente de um arquivo .env
 const path = require('path');  // Biblioteca para manipular caminhos de arquivos e diretórios
 const bcrypt = require('bcryptjs');  // Biblioteca para criptografar e comparar senhas
+const session = require('express-session');  // Biblioteca para gerenciar sessões de usuário
 
 // Carrega as variáveis de ambiente do arquivo .env
 dotenv.config();
@@ -15,6 +16,14 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));  // Para interpretar dados de formulários (form-urlencoded)
 app.use(express.json());  // Para interpretar dados no formato JSON
 app.use(express.static(path.join(__dirname, 'public')));  // Define a pasta 'public' para servir arquivos estáticos (CSS, JS, imagens, etc.)
+
+// Configuração de sessão
+app.use(session({
+  secret: '170899',  // Defina uma chave secreta para a sessão
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }  // Defina como true em um ambiente de produção com HTTPS
+}));
 
 // Configuração da conexão com o MySQL
 const db = mysql.createConnection({
@@ -110,6 +119,9 @@ app.post('/login', async (req, res) => {
         return res.send(`<script>alert('Credenciais inválidas.'); window.location.href='/login';</script>`);
       }
 
+      // Cria a sessão para o usuário logado
+      req.session.user = { id: results[0].id, username: results[0].username };
+
       // Se o login for bem-sucedido
       res.send(`<script>alert('Login bem-sucedido!'); window.location.href='/portfolio';</script>`);
     });
@@ -121,7 +133,10 @@ app.post('/login', async (req, res) => {
 
 // Rota para o portfólio
 app.get('/portfolio', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'portfolio.html')); // Envia o arquivo HTML do portfólio
+  if (!req.session.user) {
+    return res.send(`<script>alert('Você precisa fazer login primeiro.'); window.location.href='/login';</script>`);
+  }
+  res.sendFile(path.join(__dirname, 'views', 'portfolio.html'));
 });
 
 // Rota para download do currículo
@@ -143,7 +158,7 @@ app.get('/logout', (req, res) => {
         console.error('Erro ao encerrar a sessão:', err);
         return res.status(500).send('Erro ao encerrar a sessão.');
       }
-      res.send(`<script>alert('Logout realizado com sucesso! Volte sempre!'); window.location.href='/login';</script>`);
+      res.send(`<script>alert('Logout realizado com sucesso! Volte sempre!'); window.location.href='/';</script>`);
     });
   } else {
     res.send(`<script>alert('Você já está deslogado. Até a próxima!'); window.location.href='/';</script>`);
