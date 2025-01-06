@@ -143,13 +143,16 @@ app.get('/logout', (req, res) => {
         console.error('Erro ao encerrar a sessão:', err);
         return res.status(500).send('Erro ao encerrar a sessão.');
       }
-      res.redirect('/login');
+      res.send(`<script>alert('Logout realizado com sucesso! Volte sempre!'); window.location.href='/login';</script>`);
     });
   } else {
-    // Fazendo logout no sistema
-    res.send(`<script>alert('Até logo, Aguardo você em breve!'); window.location.href='/';</script>`);
-    // res.redirect('/login');
+    res.send(`<script>alert('Você já está deslogado. Até a próxima!'); window.location.href='/';</script>`);
   }
+});
+
+// Rota para página sobre
+app.get('/sobre', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'sobre.html')); // Envia o arquivo HTML da página sobre
 });
 
 // Inicia o servidor na porta 3000

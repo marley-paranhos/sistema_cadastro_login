@@ -3,8 +3,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(rgba(24, 42, 80, 0.8), rgba(129, 129, 129, 0.8)),
-  url('../images/fundo.avif');
-  background-size: cover;
+  url('../images/bg.webp');
+  background-size:contain;
   margin: 0;
   padding: 0;
   display: flex;
@@ -69,7 +69,7 @@ header {
 
 .btn-sair {
   padding: 5px 10px;
-  background: rgba(253, 95, 95, 0.857);
+  background-color: #f44336;
   color: #fff;
   border-radius: 5px;
   transition: background-color 0.3s;
@@ -126,6 +126,12 @@ h3 {
 
 h4 {
   text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+li {
+  /* text-align: center; */
   color: rgb(255, 255, 255);
   margin-bottom: 20px;
 }
@@ -269,7 +275,7 @@ label {
   color: #cccccc;
 }
 
-/* Estlização das imagens da página portfolio */
+/* Estilização das imagens da página portfolio */
 .download-curriculo .curriculo {
   display: flex;
   justify-content: center;
@@ -287,33 +293,89 @@ section {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Seção Meus Projetos */
+/* Estilo para centralizar as imagens no contêiner */
 .projetos-container {
   display: flex;
-  flex-direction: column; /* Organiza os projetos em colunas */
-  gap: 35px; /* Espaçamento entre as linhas de projetos */
+  flex-direction: column; /* Exibe os projetos em colunas */
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Espaçamento entre os projetos */
 }
 
 .projeto {
-  display: flex; /* Exibe os itens de cada projeto em linha */
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px; /* Espaçamento entre os itens do projeto */
+  display: flex; /* Exibe os itens do projeto em linha */
+  flex-direction: column; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  gap: 5px; /* Espaçamento entre os itens do projeto */
 }
+
+/* Estilo adicional para as imagens */
+/* Estilo adicional para as imagens */
+.projeto img {
+  max-width: 30%; /* Ajusta para um tamanho menor no contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  cursor: pointer; /* Mostra que é clicável */
+  border-radius: 8px; /* Adiciona cantos arredondados, opcional */
+  transition: transform 0.9s ease; /* Animação para hover */
+}
+
+/* Efeito ao passar o mouse sobre as imagens */
+.projeto img:hover {
+  transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Estilização do modal (lightbox) */
+.modal {
+  display: none; /* Modal inicialmente oculto */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagem ampliada no modal */
+.modal img {
+  width: 94%;
+  height: 94%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para destacar a imagem */
+}
+
+/* Botão para fechar o modal */
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.modal .close:hover {
+  color: #ff0000; /* Altera a cor ao passar o mouse */
+}
+
 
 /* Ajustes responsivos para dispositivos menores */
 @media (max-width: 768px) {
   main {
-    flex-direction: column; /* Empilha as sections em dispositivos menores */
-    gap: 10px;
+    flex-direction: column; /* Empilha as sections em colunas */
   }
+}
   
-  .projetos-container {
-    gap: 10px; /* Reduz o espaço entre as linhas em telas menores */
-  }
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  .projeto {
-    flex-wrap: wrap; /* Permite que os itens dentro de um projeto se ajustem em telas menores */
-  }
+.sobre-container li {
+  color: white;
 }

@@ -50,9 +50,3 @@ Marley Paranhos
 💻 Desenvolvedor Back-End | Estudante de AWS Cloud Computing
 📧 mpsvideos.marley@gmail.com
 🌐 https://github.com/marley-paranhos | https://www.linkedin.com/in/marley-paranhos/
-
----
-
-📬 Contato
-Email: mpsvideos.marley@gmail.com
-LinkedIn: https://www.linkedin.com/in/marley-paranhos/

@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - MPSolutions</title>
+  <title>Portfolio - Marley Paranhos</title>
+  <!-- Link para o arquivo CSS para estilização -->
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Script para funcionalidade de lightbox (exibição ampliada das imagens) -->
+  <script src="/js/lightbox.js"></script>
 </head>
 
 <body>
@@ -13,62 +16,111 @@
   <header>
     <h2>MPSolutions</h2>
     <nav class="nav-links">
+      <!-- Links de navegação -->
       <a href="/">Home</a>
       <a href="https://wa.me/+5531980139754" target="_blank">Contato</a>
-      <a href="/sobre" target="_blank">Sobre</a>
+      <a href="/sobre">Sobre</a>
       <a href="/logout" class="btn-sair btn-danger">Sair</a>
     </nav>
   </header>
 
   <!-- Main Content -->
   <main>
-    <!-- Sobre Mim -->
+    <!-- Seção Sobre Mim -->
     <section id="sobre-mim">
-      <h1>Sobre Mim</h1>
-      <h3><i>Olá, sou Marley Paranhos, um desenvolvedor back-end apaixonado por criar soluções inovadoras.
-        <br>Tenho experiência com Python, Flask, SQLite e AWS.
-      <br>Estou sempre em busca de novos desafios e aprendizados.</i></h3>
+      <h1><i>Sobre Mim</i></h1>
+      <h3>
+        <i>Olá, sou Marley Paranhos, um desenvolvedor back-end apaixonado por criar soluções inovadoras.
+        <br>Tenho experiência com Python, Flask, SQLite, Tkinter e AWS.
+        <br>Estou sempre em busca de novos desafios e aprendizados.</i>
+      </h3>
     </section>
 
-    <!-- Meus Projetos -->
+    <!-- Seção Meus Projetos -->
     <section id="meus-projetos">
-      <h1>Meus Projetos</h1>
+      <h1><i>Meus Projetos</i></h1>
       <div class="projetos-container">
+        <h1>Detalhes do Sistema de Controle de Estoque</h1>
+      <p>
+        Este programa é um sistema de controle de estoque desenvolvido em Python, utilizando as bibliotecas Tkinter para a interface gráfica e SQLite como banco de dados para armazenamento das informações.
+      </p>
+      <h3>Funcionalidades principais:</h3>
+      <ul>
+        <li><strong>Cadastro de Produtos:</strong> Permite inserir novos produtos no estoque, preenchendo informações como Nome, Modelo, Valor unitário e Quantidade.</li>
+        <li><strong>Atualização de Produtos:</strong> Atualiza os dados cadastrados, permitindo alterar informações como quantidade, modelo e valor.</li>
+        <li><strong>Exclusão de Produtos:</strong> Exclui registros de produtos permanentemente.</li>
+        <li><strong>Busca de Produtos:</strong> Inclui um campo de pesquisa pelo modelo do produto para facilitar a localização de itens.</li>
+        <li><strong>Visualização de Estoque:</strong> Exibe os produtos cadastrados em uma tabela organizada com colunas como ID, Nome, Modelo, Valor e Quantidade.</li>
+        <li><strong>Gestão de Vendas:</strong> Possui um botão para realizar vendas, descontando a quantidade vendida do estoque.</li>
+        <li><strong>Teclas de Atalho:</strong>
+          <ul>
+            <li>Ctrl + Home: Seleciona o primeiro registro na tabela.</li>
+            <li>Ctrl + End: Seleciona o último registro.</li>
+          </ul>
+        </li>
+        <li><strong>Interface Intuitiva:</strong> Botões bem destacados para cada funcionalidade e campo de pesquisa integrado.</li>
+      </ul>
+      <h3>Tecnologias utilizadas:</h3>
+      <ul>
+        <li>Python: Para a lógica de negócios.</li>
+        <li>Tkinter: Para a interface gráfica.</li>
+        <li>SQLite: Para armazenar e gerenciar os dados dos produtos.</li>
+      </ul>
+      <p>
+        Este programa é uma solução simples e funcional para pequenas empresas ou lojas que precisam de um sistema local para gerenciar seus estoques.
+      </p>
+        <!-- Projeto 1 -->
         <div class="projeto">
-          <img src="../images/01.jpeg" alt="projeto 1">
-          <h4>Controle de Estoque</h4>
-          <p>Cadastro de produtos e controle de estoque.</p>
+          <img src="../images/01.jpg" alt="Projeto 1" onclick="openModal(this)">
+          <p>Aviso que o cadastro foi realizado com sucesso.</p>
         </div>
+
+        <!-- Projeto 2 -->
         <div class="projeto">
-          <img src="../images/01.jpeg" alt="projeto 1">
-          <h4>Controle de Estoque</h4>
-          <p>Cadastro de produtos e controle de estoque.</p>
+          <img src="../images/02.jpeg" alt="Projeto 2" onclick="openModal(this)">
+          <p>Aviso de um produto com o estoque baixo.</p>
         </div>
+        
+        <!-- Projeto 3 -->
         <div class="projeto">
-          <img src="../images/01.jpeg" alt="projeto 1">
-          <h4>Controle de Estoque</h4>
-          <p>Cadastro de produtos e controle de estoque.</p>
+          <img src="../images/03.jpeg" alt="Projeto 3" onclick="openModal(this)">
+          <p>Seleciona os produtos que estão com o estoque abaixo de três unidades.
+          </p>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="projeto">
+          <img src="../images/04.jpeg" alt="Projeto 4" onclick="openModal(this)">
+          <p>Aviso de um produto com o estoque zerado.</p>
+        </div>
+        
+        <!-- Modal para exibir a imagem ampliada -->
+        <div id="lightboxModal" class="modal">
+          <!-- Botão para fechar o modal -->
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modalImage" src="">
         </div>
       </div>
     </section>
 
-    <!-- Download Currículo -->
+    <!-- Seção para Download do Currículo -->
     <section id="download-curriculo">
       <div class="curriculo">
         <h1>Baixe meu Currículo</h1>
-      <form action="/download" method="get">
-        <button type="submit" class="btn btn-primary">Download</button>
-      </form>
+        <!-- Formulário para download do currículo -->
+        <form action="/download" method="get">
+          <button type="submit" class="btn btn-primary">Download</button>
+        </form>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="footer-container">
       <p>&copy; 2024 MPSolutions. Todos os direitos reservados.</p>
-      <p>Siga-nos: 
+      <p>
+        Siga-nos: 
         <a href="https://www.linkedin.com/in/marley-paranhos" target="_blank">LinkedIn</a> | 
         <a href="https://github.com/marley-paranhos" target="_blank">GitHub</a>
       </p>
