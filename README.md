@@ -40,35 +40,6 @@ Este projeto é um sistema de cadastro e login desenvolvido utilizando **Node.js
 6. **Página Sobre**:
    - Fornece informações gerais sobre o sistema.
 
-## Como Executar o Projeto
-
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-
-2. **Instale as dependências**:
-   ```bash
-   npm install
-   ```
-
-3. **Configure o arquivo `.env`** com as seguintes variáveis:
-   ```env
-   DB_HOST=localhost
-   DB_USER=seu_usuario
-   DB_PASSWORD=sua_senha
-   DB_NAME=seu_banco_de_dados
-   DB_PORT=3306
-   ```
-
-4. **Inicie o servidor**:
-   ```bash
-   npm start
-   ```
-
-5. **Acesse o sistema**:
-   Abra o navegador e vá para [http://localhost:3000](http://localhost:3000).
-
 ## Habilidades Demonstradas
 
 - Criação de rotas no Express.js.
